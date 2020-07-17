@@ -4,23 +4,27 @@ public class Main
 {
     public static void main(String[] args)
     {
-        int[][] multTable = new int[12][12];
+        int[][] multTable = new int[100][100];
 
-        for (int a = 1; a <= 10; a++)
+        int j = multTable.length;
+
+        for (int a = 1; a <= j; a++)
         {
-            for (int b = 1; b <= 10; b++)
+            int y = multTable[a - 1].length;
+
+            for (int b = 1; b <= y; b++)
             {
-                int Length = multTable.length[a - 1][b - 1] = a * b;
+                multTable[a - 1][b - 1] = a * b;
             }
         }
 
-        for (int c = 1; c <= 10; c++)
+        for (int c = 1; c <= j; c++)
         {
+            int y = multTable[c - 1].length;
             System.out.println();
-            for (int d = 1; d <= 10; d++)
+            for (int d = 1; d <= y; d++)
             {
-                int Length2 = multTable.length[c - 1][d - 1];
-                System.out.format("%4s", Length2);
+                System.out.format("%6s", multTable[c - 1][d - 1]);
             }
         }
 
